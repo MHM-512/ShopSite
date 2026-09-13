@@ -1,6 +1,7 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { blueGrey } from '@mui/material/colors';
+<<<<<<< HEAD
 import { Box, Button, TextField, Typography, useFormControl } from '@mui/material';
 
 // Icon Singuo
@@ -16,6 +17,12 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 //react roter
 import { useNavigate } from "react-router-dom";
+=======
+import { Box, Button, TextField, Typography } from '@mui/material';
+
+// Icon Singuo
+import Face6Icon from '@mui/icons-material/Face6';
+>>>>>>> 865fee61cdd8d565eceaa68b5bf4d6889f306e18
 
 export default function SignUp() {
     const themeBG = createTheme({
@@ -25,6 +32,7 @@ export default function SignUp() {
             },
         },
     });
+<<<<<<< HEAD
     //submit form 
     const schema = yup.object().shape({
         name: yup.string().required('name is Mandatory').max(10),
@@ -53,6 +61,32 @@ return (
         <CssBaseline />
         <form onSubmit={handleSubmit(onSubmit)}>
             <Box
+=======
+
+
+    const onSubmit = (data) => {
+        const dataFormInformation = data;
+        // localStorage.setItem("userData", JSON.stringify(data));
+        console.log(dataFormInformation);
+        // navigate("/profile");
+    };
+
+    const singUpBtnHandler = () => {
+        console.log('1', 'singUpBtnHandler');
+        
+    }
+    const IHaveAcconutBtnHandler = () => {
+    console.log('2' , 'IHaveAcconutBtnHandler');
+    }
+    
+
+
+    return (
+        <ThemeProvider theme={themeBG}>
+            {/* style bgc */}
+            <CssBaseline />
+            <Box ///fsf
+>>>>>>> 865fee61cdd8d565eceaa68b5bf4d6889f306e18
                 sx={{
                     display: 'flex',
                     justifyContent: 'center',
@@ -108,6 +142,7 @@ return (
 
                     </Box>
                     {/* main */}
+<<<<<<< HEAD
                     <Box sx={{ width: '100%', }}>
                         <Box sx={{ marginTop: '35px', width: '100%', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
@@ -145,12 +180,44 @@ return (
                             />
                         </Box>
                         <Box sx={{ marginTop: '35px', width: '100%', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+=======
+                    <Box sx={{ width: '100%' }}>
+                        <Box sx={{ marginTop: '20px', width: '100%', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+
+                            <TextField
+                                label="enter your name"
+                                type="password"
+                                variant="outlined"
+                                sx={{ width: '300px' }}
+                            />
+                        </Box>
+                        <Box sx={{ marginTop: '20px', width: '100%', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+
+                            <TextField
+                                label="enter your last name"
+                                type="password"
+                                variant="outlined"
+                                sx={{ width: '300px' }}
+                            />
+                        </Box>
+                        <Box sx={{ marginTop: '20px', width: '100%', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+
+                            <TextField
+                                label="enter your Email"
+                                type="password"
+                                variant="outlined"
+                                sx={{ width: '300px' }}
+                            />
+                        </Box>
+                        <Box sx={{ marginTop: '20px', width: '100%', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+>>>>>>> 865fee61cdd8d565eceaa68b5bf4d6889f306e18
 
                             <TextField
                                 label="password"
                                 type="password"
                                 variant="outlined"
                                 sx={{ width: '300px' }}
+<<<<<<< HEAD
                                 {...register("password")}
                                 helperText={errors.password?.message}
                             />
@@ -164,22 +231,47 @@ return (
                                 sx={{ width: '300px' }}
                                 {...register("confimPassword")}
                                 helperText={errors.confimPassword?.message}
+=======
+                            />
+                        </Box>
+                        <Box sx={{ marginTop: '20px', width: '100%', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+
+                            <TextField
+                                label="cheked pasword"
+                                type="password"
+                                variant="outlined"
+                                sx={{ width: '300px' }}
+>>>>>>> 865fee61cdd8d565eceaa68b5bf4d6889f306e18
                             />
                         </Box>
 
                     </Box>
+<<<<<<< HEAD
                     <Box sx={{ marginTop: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
                         {/* hook form */}
                         <Button type="submit" variant="contained" color='success' sx={{ margin: '10px' }}>sing up</Button>
                         <Button onClick={()=> { navgate('/login')}} variant="text"><Typography>I have an account</Typography></Button>
+=======
+                    <Box sx={{ marginTop: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+                        <Button onClick={singUpBtnHandler} variant="contained" color='success' sx={{ margin: '10px' }}>sing up</Button>
+                        <Button onClick={IHaveAcconutBtnHandler} variant="text"><Typography>I have an account</Typography></Button>
+>>>>>>> 865fee61cdd8d565eceaa68b5bf4d6889f306e18
                     </Box>
 
                 </Box>
             </Box>
 
+<<<<<<< HEAD
         </form>
 
     </ThemeProvider>
 
 );
+=======
+
+
+        </ThemeProvider>
+
+    );
+>>>>>>> 865fee61cdd8d565eceaa68b5bf4d6889f306e18
 }

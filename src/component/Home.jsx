@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button, Typography } from "@mui/material"
 import { useState } from "react"
 
@@ -21,6 +22,16 @@ export default function Home() {
             <div>
                 {isvisible && <h1>This is my hidden text</h1>}
             </div>
+=======
+
+
+
+export default function Home ( ) {
+    return(
+        <>
+        <h1>Home page</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere ipsum cum eveniet eligendi. Nemo enim adipisci reprehenderit, eveniet excepturi magnam minus, modi illum quaerat quibusdam vero cumque autem, alias ex amet dolor hic sequi?</p>
+>>>>>>> 865fee61cdd8d565eceaa68b5bf4d6889f306e18
         </>
     )
 }
