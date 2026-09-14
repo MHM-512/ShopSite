@@ -15,15 +15,18 @@ React Hook Form (Form Handling)
 Material-UI (MUI) (Component Library)
 JavaScript (ES6+)
 ## 📂 Getting Started
-Clone the repository:
-bash
+1. Clone the repository:
+   bash
    git clone [YOUR_REPO_URL]
-Install dependencies:
-bash
+   bash
+3. Install dependencies:
+   bash
    npm install
-Run the development server:
-bash
+   bash
+5. Run the development server:
+   bash
    npm start
+   bash
 ## 💡 Key Learning Outcomes
 Managing Side-effects using useEffect effectively.
 Understanding the lifecycle of components and handling Conditional Rendering.
