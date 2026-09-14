@@ -1,3 +1,8 @@
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/9bbb4026-cb48-43dc-8b2e-27788ddb8a1f" />
+<img width="500"  alt="image" src="https://github.com/user-attachments/assets/e0bedee9-0269-4ed8-80f8-4e437fd230bb" />
+<img width="500"  alt="image" src="https://github.com/user-attachments/assets/ad561135-1a4c-4821-a522-9697a810bf78" />
+
+
 ### React Authentication & Dashboard Project
 This project is a React-based web application focused on implementing robust authentication, protected routing, and efficient state management. It serves as a practical implementation of modern React development patterns.
 
