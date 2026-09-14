@@ -16,17 +16,17 @@ Material-UI (MUI) (Component Library)
 JavaScript (ES6+)
 ## 📂 Getting Started
 1. Clone the repository:
-   bash
-   git clone [YOUR_REPO_URL]
-   bash
+
+   `git clone [YOUR_REPO_URL]`
+  
 3. Install dependencies:
-   bash
-   npm install
-   bash
+
+   `npm install`
+
 5. Run the development server:
-   bash
-   npm start
-   bash
+
+   `npm start`
+
 ## 💡 Key Learning Outcomes
 Managing Side-effects using useEffect effectively.
 Understanding the lifecycle of components and handling Conditional Rendering.
