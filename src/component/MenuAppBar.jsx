@@ -101,8 +101,7 @@ export default function MenuAppBar() {
                   open={Boolean(anchorEl)}
                   onClose={handleClose}
                 >
-<<<<<<< HEAD
-                  
+
       
                   <Link to="/Profile" ><MenuItem onClick={handleClose}>Profile</MenuItem></Link>
                   <Link to="/Home" underline="none"><MenuItem onClick={handleClose}>Home</MenuItem></Link>
@@ -110,16 +109,7 @@ export default function MenuAppBar() {
                   <Link to="/SignUp" underline="none"><MenuItem onClick={handleClose}>Sign Up</MenuItem></Link>
                   <Link to="/Login" underline="none"><MenuItem onClick={handleClose}>Login</MenuItem></Link>
                   <Link to="/AlertVariousStates" underline="none"><MenuItem onClick={handleClose}>Alert</MenuItem></Link>
-=======
-                  {/* <MenuItem onClick={handleClose}><Link to="/Profile">Profile </Link></MenuItem> */}
 
-                  <Link to="/Profile" ><MenuItem onClick={handleClose}>Profile</MenuItem></Link>
-                  <Link to="/Home" underline="none"><MenuItem onClick={handleClose}>Home</MenuItem></Link>
-                  <Link to="/Account" underline="none"><MenuItem onClick={handleClose}>My account</MenuItem></Link>
-                  <Link to="/SignIn" underline="none"><MenuItem onClick={handleClose}>Sign In</MenuItem></Link>
-                  <Link to="/Login" underline="none"><MenuItem onClick={handleClose}>Login</MenuItem></Link>
-
->>>>>>> 865fee61cdd8d565eceaa68b5bf4d6889f306e18
 
                 </Menu>
               </div>

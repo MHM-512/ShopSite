@@ -12,7 +12,6 @@ import EmailIcon from '@mui/icons-material/Email';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PasswordIcon from '@mui/icons-material/Password';
-<<<<<<< HEAD
 // Hook form 
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
@@ -60,33 +59,6 @@ export default function Profile() {
         setUser(data);
     };
 
-=======
-
-export default function Profile() {
-    // const [user, setUser] = useState(null);
-    const themeBG = createTheme({
-        palette: {
-            background: {
-                default: '#047790', // رنگ پس‌زمینه کل صفحه
-            },
-        },
-    });
-
-
-
-    const [user, setUser] = useState(null)
-
-    // useEffect(() => {
-    //     // خواندن داده از localStorage
-    //     const storedData = localStorage.getItem("userData");
-    //     if (storedData) {
-    //         setUser(JSON.parse(storedData)); // تبدیل رشته به آبجکت
-    //     }
-    // }, []);
-
-    // if (!user) return <p>Loading...</p>;
-
->>>>>>> 865fee61cdd8d565eceaa68b5bf4d6889f306e18
     return (
         <ThemeProvider theme={themeBG}>
             {/* style bgc */}
@@ -143,7 +115,7 @@ export default function Profile() {
 
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                                 <SupervisorAccountIcon />
-<<<<<<< HEAD
+
                                 <Typography>name : {user?.name}</Typography>
                             </Box>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -153,17 +125,7 @@ export default function Profile() {
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                                 <EmailIcon />
                                 <Typography>Email: {user?.email} </Typography>
-=======
-                                <Typography>name : mm</Typography>
-                            </Box>
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                <DriveFileRenameOutlineIcon />
-                                <Typography>LastName: mmd</Typography>
-                            </Box>
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                <EmailIcon />
-                                <Typography>Email: gmail.com </Typography>
->>>>>>> 865fee61cdd8d565eceaa68b5bf4d6889f306e18
+
                             </Box>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                                 <PasswordIcon />
@@ -173,7 +135,7 @@ export default function Profile() {
 
                         </Stack>
                     </Box>
-<<<<<<< HEAD
+
                     {/*  change profile */}
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Box
@@ -293,117 +255,6 @@ export default function Profile() {
                             </Box>
                         </Box>
                     </form>
-=======
-                    <Box ///fsf
-                        sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center'
-                        }}
-                    >
-                        {/* conteiner box */}
-                        <Box
-                            sx={{
-                                marginTop: '50px',
-                                width: 564,
-                                height: 511,
-                                borderRadius: 3,
-                                bgcolor: blueGrey[200],
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'left',
-                                alignItems: 'start',
-                                padding: 5
-                            }}
-                        >
-
-                            {/* header container box */}
-                            <Box
-                                sx={{
-                                    width: '450px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'space-between',
-                                }}
-                            >
-                                {/* icon and name,Email */}
-                                <Box
-                                    sx={{
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                    }}
-                                >
-                                    <Face6Icon sx={{ fontSize: '70px' }} />
-                                    <div>
-                                        <Typography>your name</Typography>
-                                        <Typography>your Email</Typography>
-                                    </div>
-                                </Box>
-                                <Box>
-                                    <Typography variant="h4"> change profile </Typography>
-                                </Box>
-                            </Box>
-
-                            <Box
-                                sx={{
-                                    borderTop: 1,
-                                    width: "100%",
-                                    marginTop: '20px',
-                                }}
-                            >
-
-                            </Box>
-                            {/* main */}
-                            <Box>
-                                <Box sx={{ marginTop: '20px', width: '400px', height: '50px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                    <Typography> Name </Typography>
-                                    <TextField
-                                        label="name"
-                                        type="password"
-                                        variant="standard"
-                                        sx={{ width: '300px' }}
-                                    />
-                                </Box>
-                                <Box sx={{ marginTop: '20px', width: '400px', height: '50px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                    <Typography> last name </Typography>
-                                    <TextField
-                                        label="last name"
-                                        type="password"
-                                        variant="standard"
-                                        sx={{ width: '300px' }}
-                                    />
-                                </Box>
-                                <Box sx={{ marginTop: '20px', width: '400px', height: '50px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                    <Typography> Email </Typography>
-                                    <TextField
-                                        label="Email"
-                                        type="password"
-                                        variant="standard"
-                                        sx={{ width: '300px' }}
-                                    />
-                                </Box>
-                                <Box sx={{ marginTop: '20px', width: '400px', height: '50px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                    <Typography> password </Typography>
-                                    <TextField
-                                        label="password"
-                                        type="password"
-                                        variant="standard"
-                                        sx={{ width: '300px' }}
-                                    />
-                                </Box>
-
-                                <Box sx={{ margin: '20px' }}>
-                                    <Button variant="contained" color='error' sx={{ margin: '10px' }}>seve change </Button>
-                                    <Button variant="contained">rest</Button>
-                                </Box>
-
-                            </Box>
-
-                        </Box>
-                    </Box>
-
->>>>>>> 865fee61cdd8d565eceaa68b5bf4d6889f306e18
 
                 </Box>
 
