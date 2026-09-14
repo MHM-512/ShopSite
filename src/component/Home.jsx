@@ -1,11 +1,15 @@
 
 import { Button, Typography } from "@mui/material"
 import { useState } from "react"
-
+import AlertVariousStates from "./AlertVariousStates"
+import { useLocation } from 'react-router-dom';
 
 
 export default function Home() {
     const [isvisible, setvisible] = useState(false)
+    const location = useLocation();
+    // get message 
+    const [alertMessage, setAlertMessage] = useState(location.state?.message || "");
     return (
         <>
             <Typography variant="h3"> page Home </Typography>
@@ -23,6 +27,10 @@ export default function Home() {
                 {isvisible && <h1>This is my hidden text</h1>}
             </div>
 
+            <AlertVariousStates
+                message={alertMessage}
+                onClose={() => setAlertMessage("")}
+            />
         </>
     )
 }

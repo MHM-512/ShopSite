@@ -16,10 +16,10 @@ import PasswordIcon from '@mui/icons-material/Password';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup'
-
+import { useNavigate } from 'react-router-dom';
 
 export default function Profile() {
-    // const [user, setUser] = useState(null);
+    let navgate = useNavigate()
 
     // bgcolor and theme
     const themeBG = createTheme({
@@ -34,14 +34,16 @@ export default function Profile() {
     useEffect(() => {
         // خواندن داده از localStorage
         const storedData = localStorage.getItem("userData");
+        if (!storedData) {
+            navgate('/SignUp');
+        }
         if (storedData) {
             setUser(JSON.parse(storedData));
         }
-    }, []);
-    // if (!user) return <p>Loading...</p>;
+    }, [navgate]);
+
 
     // change profile handler
-
     //submit form 
     const schema = yup.object().shape({
         name: yup.string().required('name is Mandatory').max(10),
@@ -58,6 +60,8 @@ export default function Profile() {
         localStorage.setItem("userData", JSON.stringify(data));
         setUser(data);
     };
+
+
 
     return (
         <ThemeProvider theme={themeBG}>

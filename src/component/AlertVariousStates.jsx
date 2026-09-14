@@ -8,23 +8,13 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { Alert, Box, Button, createTheme, CssBaseline, ThemeProvider, Typography } from '@mui/material';
 import { blueGrey } from '@mui/material/colors';
 // import IconButton from '@mui/material';
-
 // import { ColorPaletteProp } from '@mui/joy/styles';
 
-export default function AlertVariousStates() {
-    const themeBG = createTheme({
-        palette: {
-            background: {
-                default: '#047790',
-            },
-        },
-    });
+export default function AlertVariousStates(  {message, onClose} ) {
     const items = [
         { title: 'Success', color: 'success', icon: <CheckCircleIcon /> },
-
     ];
     return (
-
         <Box
             sx={{
                 bgcolor: blueGrey[200],
@@ -37,7 +27,6 @@ export default function AlertVariousStates() {
                 marginBottom: "15px" ,
                 marginLeft : '8px'
             }}
-
         >
             {items.map(({ title, color, icon }) => (
                 <Alert
@@ -55,7 +44,7 @@ export default function AlertVariousStates() {
                     <div>
                         <div>{title}</div>
                         <Typography level="body-sm" color={color}>
-                            This is a time-sensitive {title} Alert.
+                           {message}
                         </Typography>
                     </div>
                 </Alert>

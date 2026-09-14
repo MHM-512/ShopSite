@@ -3,7 +3,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { blueGrey } from '@mui/material/colors';
 import { Box, Button, TextField, Typography } from '@mui/material';
-
 //Icon Login
 import FaceIcon from '@mui/icons-material/Face';
 import LoginIcon from '@mui/icons-material/Login';
@@ -13,6 +12,7 @@ import PasswordIcon from '@mui/icons-material/Password';
 import { useNavigate } from "react-router-dom";
 // hook-form
 import { useForm } from "react-hook-form";
+import { useState } from 'react';
 
 export default function Login() {
     const themeBG = createTheme({
@@ -22,11 +22,10 @@ export default function Login() {
             },
         },
     });
-
-    const { register, handleSubmit } = useForm(); 
+    const { register, handleSubmit } = useForm();
     let navigate = useNavigate();
+    const [showAlert, setshowAlert] = useState(false)
     const onSubmit = (data) => {
-     
         const savedData = localStorage.getItem("userData");
 
         if (!savedData) {
@@ -34,27 +33,17 @@ export default function Login() {
             return;
         }
         const user = JSON.parse(savedData);
-
-      
         if (data.email === user.email && data.password === user.password) {
-            alert("The login was successful!✅");
-            
-
-            
+            setshowAlert(true);
+            // alert("The login was successful!✅"); 3
             localStorage.setItem("isLoggedIn", "true");
         } else {
             alert("The email or password is incorrect.");
         }
-        navigate('/Home')
+        navigate('/Home', { state: { message: "Login !" } })
+
+
     };
-
-
-
-    const loginBtnHAndler = () => {
-        console.log('3', 'loginBtnHAndler');
-
-    }
-
 
     return (
         <ThemeProvider theme={themeBG}>
@@ -66,9 +55,7 @@ export default function Login() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center'
-
                 }}
-
             >
                 {/* conteiner box */}
                 <Box
@@ -85,7 +72,6 @@ export default function Login() {
                         padding: 5
                     }}
                 >
-
                     {/* header container box */}
                     <Box
                         sx={{
@@ -118,7 +104,6 @@ export default function Login() {
                             marginTop: '20px',
                         }}
                     >
-
                     </Box>
                     {/* main */}
 
@@ -131,7 +116,6 @@ export default function Login() {
                             width: "100%"
                         }}>
                             <Box sx={{
-
                             }}>
                                 <Box sx={{ marginTop: '20px', width: '100%', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px' }}>
                                     <EmailIcon />
@@ -140,6 +124,7 @@ export default function Login() {
                                         type="text"
                                         variant="outlined"
                                         sx={{ width: '300px' }}
+                                        {...register("email")}
                                     />
                                 </Box>
                                 <Box sx={{ marginTop: '20px', width: '100%', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px' }}>
@@ -149,6 +134,7 @@ export default function Login() {
                                         type="password"
                                         variant="outlined"
                                         sx={{ width: '300px' }}
+                                        {...register("password")}
                                     />
                                 </Box>
                             </Box>

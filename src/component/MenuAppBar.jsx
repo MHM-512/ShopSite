@@ -108,7 +108,7 @@ export default function MenuAppBar() {
                   <Link to="/Account" underline="none"><MenuItem onClick={handleClose}>My account</MenuItem></Link>
                   <Link to="/SignUp" underline="none"><MenuItem onClick={handleClose}>Sign Up</MenuItem></Link>
                   <Link to="/Login" underline="none"><MenuItem onClick={handleClose}>Login</MenuItem></Link>
-                  <Link to="/AlertVariousStates" underline="none"><MenuItem onClick={handleClose}>Alert</MenuItem></Link>
+                  {/* <Link to="/AlertVariousStates" underline="none"><MenuItem onClick={handleClose}>Alert</MenuItem></Link> */}
 
 
                 </Menu>

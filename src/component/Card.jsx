@@ -27,12 +27,12 @@ export default function MediaCard() {
 
     return (
         <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            {/* 2. استفاده صحیح از map با return */}
+            
             {api.map((item) => (
                 <Card key={item.id} sx={{ maxWidth: 245 }}>
                     <CardMedia
                         sx={{ height: 140 }}
-                        image={item.image} // استفاده از داده واقعی
+                        image={item.image} 
                         title={item.title}
                     />
                     <CardContent>
