@@ -1,6 +1,9 @@
+
+  <p align="center">
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/9bbb4026-cb48-43dc-8b2e-27788ddb8a1f" />
 <img width="500"  alt="image" src="https://github.com/user-attachments/assets/e0bedee9-0269-4ed8-80f8-4e437fd230bb" />
 <img width="500"  alt="image" src="https://github.com/user-attachments/assets/ad561135-1a4c-4821-a522-9697a810bf78" />
+  </p>
 
 
 ### React Authentication & Dashboard Project
